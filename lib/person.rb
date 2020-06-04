@@ -1,7 +1,7 @@
 # your code goes here
 class Person
-    attr_accessor :bank_account,
-    attr_reader :name, :happiness, :hygiene
+    attr_accessor :bank_account
+    attr_reader :name
 
     def initialize (name)
         @name = name
@@ -15,8 +15,16 @@ class Person
         @happiness.clamp(0, 10)
     end
 
+    def happiness
+        @happiness.clamp(0, 10)
+    end
+
     def hygiene=(num)
         @hygiene = num
+        @hygiene.clamp(0, 10)
+    end
+
+    def hygiene
         @hygiene.clamp(0, 10)
     end
 
